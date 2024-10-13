@@ -15,3 +15,4 @@ spec:
   values:
     defaultSettings:
       defaultReplicaCount: 1
+      defaultDataPath: /srv/longhorn-data/
