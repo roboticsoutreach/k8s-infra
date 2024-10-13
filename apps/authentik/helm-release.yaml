@@ -16,3 +16,4 @@ spec:
     - kind: Secret
       name: helm-values
       valuesKey: values.yaml
+  timeout: 10m
