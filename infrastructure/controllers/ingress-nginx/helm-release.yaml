@@ -18,5 +18,6 @@ spec:
         type: "NodePort"
       ingressClassResource:
         default: true
+      watchIngressWithoutClass: true
     admissionWebhooks:
       enabled: false
