@@ -4,6 +4,8 @@ metadata:
   name: apps
   namespace: flux-system
 spec:
+  dependsOn:
+    - name: infra-configs
   interval: 1m
   sourceRef:
     kind: GitRepository
@@ -11,3 +13,4 @@ spec:
   path: ./apps
   prune: true
   wait: true
+  timeout: 5m0s
