@@ -14,8 +14,7 @@ spec:
       interval: 12h
   values:
     controller:
-      publishService:
-        enabled: true
+      hostNetwork: true
       ingressClassResource:
         default: true
       watchIngressWithoutClass: true
