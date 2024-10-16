@@ -15,8 +15,10 @@ spec:
   values:
     controller:
       service:
-        create: false
+        enable: false
       hostNetwork: true
+      hostPort:
+        enabled: true
       ingressClassResource:
         default: true
       watchIngressWithoutClass: true
