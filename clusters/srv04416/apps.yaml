@@ -7,10 +7,10 @@ spec:
   dependsOn:
     - name: infra-configs
   interval: 1m
+  timeout: 5m
   sourceRef:
     kind: GitRepository
     name: flux-system
   path: ./apps
   prune: true
   wait: true
-  timeout: 5m0s
