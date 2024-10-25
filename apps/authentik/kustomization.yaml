@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: authentik
 resources:
   - namespace.yaml
+  - external-secret-env.yaml
   - external-secret-values.yaml
   - helm-repository.yaml
   - helm-release.yaml
