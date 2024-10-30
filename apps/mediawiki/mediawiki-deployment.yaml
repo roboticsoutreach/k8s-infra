@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: mediawiki
-        image: ghcr.io/roboticsoutreach/mediawiki:1.42.3-sro.3
+        image: ghcr.io/roboticsoutreach/mediawiki:1.42.3-sro.4
         resources:
           limits:
             memory: "512Mi"
