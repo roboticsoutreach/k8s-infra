@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: mediawiki
+resources:
+  - namespace.yaml
+  - mariadb-config.yaml
+  - mariadb-secret.yaml
+  - mariadb-pvc.yaml
+  - mariadb-statefulset.yaml
+  - mariadb-service.yaml
+  - mediawiki-config.yaml
+  - mediawiki-secret.yaml
+  - mediawiki-deployment.yaml
+  - mediawiki-service.yaml
+  - ingress.yaml
