@@ -33,7 +33,7 @@ spec:
               command:
               - /bin/sh
               - -c
-              - ln -s /var/mediawiki-secret/localsettings.php /var/www/html/LocalSettings.php
+              - cp /var/mediawiki-secret/localsettings.php /var/www/html/LocalSettings.php
       volumes:
       - name: mediawiki-images
         persistentVolumeClaim:
