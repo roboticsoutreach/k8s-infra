@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mediawiki
+spec:
+  selector:
+    matchLabels:
+      app: mediawiki
+  template:
+    metadata:
+      labels:
+        app: mediawiki
+    spec:
+      containers:
+      - name: mediawiki
+        image: ghcr.io/roboticsoutreach/mediawiki:1.42.3-sro
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+          name: http
+        volumeMounts:
+        - name: mediawiki-images
+          mountPath: /var/www/html/images
+        - name: mediawiki-secret
+          mountPath: /var/mediawiki-secret
+          readOnly: true
+        lifecycle:
+          postStart:
+            exec:
+              command:
+              - /bin/sh
+              - -c
+              - cp /var/mediawiki-secret/localsettings.php /var/www/html/LocalSettings.php
+      volumes:
+      - name: mediawiki-images
+        persistentVolumeClaim:
+          claimName: mediawiki-images-pvc
+      - name: mediawiki-secret
+        secret:
+          secretName: mediawiki-secret

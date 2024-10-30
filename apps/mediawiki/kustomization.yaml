@@ -8,7 +8,6 @@ resources:
   - mariadb-pvc.yaml
   - mariadb-statefulset.yaml
   - mariadb-service.yaml
-  - mediawiki-config.yaml
   - mediawiki-secret.yaml
   - mediawiki-deployment.yaml
   - mediawiki-service.yaml
