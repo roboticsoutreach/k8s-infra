@@ -4,6 +4,7 @@ namespace: vaultwarden
 resources:
   - namespace.yaml
   - data-pvc.yaml
+  - env-secret.yaml
   - deployment.yaml
   - service.yaml
   - ingress.yaml
