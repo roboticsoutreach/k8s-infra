@@ -20,7 +20,8 @@ spec:
       hosts:
       - host: wiki.roboticsoutreach.org
         paths:
-        - /
+        - path: /
+          pathType: Prefix
       tls:
       - hosts:
         - wiki.roboticsoutreach.org
