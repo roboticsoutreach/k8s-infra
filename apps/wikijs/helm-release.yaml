@@ -7,21 +7,21 @@ spec:
   chart:
     spec:
       chart: wiki
-      version: '2.5.*'
+      version: '2.2.*'
       sourceRef:
         kind: HelmRepository
         name: wikijs
       interval: 12h
-  # values:
-  #   ingress:
-  #     enabled: true
-  #     annotations:
-  #       cert-manager.io/cluster-issuer: letsencrypt
-  #     hosts:
-  #     - host: wiki.roboticsoutreach.org
-  #       paths:
-  #       - /
-  #     tls:
-  #     - hosts:
-  #       - wiki.roboticsoutreach.org
-  #       secretName: wiki.roboticsoutreach.org-tls
+  values:
+    ingress:
+      enabled: true
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt
+      hosts:
+      - host: wiki.roboticsoutreach.org
+        paths:
+        - /
+      tls:
+      - hosts:
+        - wiki.roboticsoutreach.org
+        secretName: wiki.roboticsoutreach.org-tls
