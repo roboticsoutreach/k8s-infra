@@ -16,6 +16,14 @@ spec:
         cert-manager.io/cluster-issuer: letsencrypt
       tls: true
     ghostBlogTitle: Southampton Robotics Outreach
+    ghostEnableHttps: true
+    resources:
+      requests:
+        cpu: 300m
+        memory: 256Mi
+      limits:
+        cpu: 500m
+        memory: 1Gi
   valuesFrom:
   - kind: Secret
     name: values
