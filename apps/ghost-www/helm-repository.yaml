@@ -1,9 +1,0 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: OCIRepository
-metadata:
-  name: ghost
-spec:
-  interval: 24h
-  url: oci://registry-1.docker.io/bitnamicharts/ghost
-  ref:
-    semver: ">22.1.0"
