@@ -19,7 +19,7 @@ spec:
             allowPrivilegeEscalation: false
             privileged: false
             runAsNonRoot: true
-            runAsUser: 65534
+            runAsUser: 1001
           image: docker.io/bitnami/mysql:8.4
           imagePullPolicy: Always
           envFrom:
