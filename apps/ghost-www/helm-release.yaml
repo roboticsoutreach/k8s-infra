@@ -4,14 +4,10 @@ metadata:
   name: ghost
 spec:
   interval: 30m
-  chart:
-    spec:
-      chart: ghost
-      version: '22.1.*'
-      sourceRef:
-        kind: HelmRepository
-        name: ghost
-      interval: 12h
+  releaseName: ghost
+  chartRef:
+    kind: OCIRepository
+    name: ghost
   values:
     ingress:
       enabled: true
