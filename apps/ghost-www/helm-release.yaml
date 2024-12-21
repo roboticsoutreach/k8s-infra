@@ -24,7 +24,6 @@ spec:
       limits:
         cpu: 500m
         memory: 1Gi
-    ghostSkipInstall: true # we can install it ourselves
   valuesFrom:
   - kind: Secret
     name: values
