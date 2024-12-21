@@ -18,7 +18,6 @@ spec:
           securityContext:
             allowPrivilegeEscalation: false
             privileged: false
-            readOnlyRootFilesystem: true
             runAsNonRoot: true
             runAsUser: 65534
           image: docker.io/bitnami/mysql:8.4
@@ -40,12 +39,6 @@ spec:
           volumeMounts:
           - name: data
             mountPath: /bitnami/mysql/data
-            readOnly: false
-          - name: socket
-            mountPath: /var/run/mysqld
-            readOnly: false
-          - name: tmp
-            mountPath: /tmp
             readOnly: false
       volumes:
       - name: data
