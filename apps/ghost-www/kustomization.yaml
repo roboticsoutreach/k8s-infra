@@ -3,7 +3,6 @@ kind: Kustomization
 namespace: ghost-www
 resources:
   - namespace.yaml
-  - mysql-pvc.yaml
-  - mysql-env-secret.yaml
-  - mysql-statefulset.yaml
-  - mysql-service.yaml
+  - values-secret.yaml
+  - helm-repository.yaml
+  - helm-release.yaml
