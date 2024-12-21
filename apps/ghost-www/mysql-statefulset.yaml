@@ -39,8 +39,7 @@ spec:
             name: mysql
           volumeMounts:
           - name: data
-            mountPath: /var/lib/mysql
-            subPath: mysql-empty-subdir
+            mountPath: /bitnami/mysql/data
             readOnly: false
           - name: socket
             mountPath: /var/run/mysqld
