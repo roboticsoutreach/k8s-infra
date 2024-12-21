@@ -15,11 +15,6 @@ spec:
     spec:
       containers:
         - name: mysql
-          securityContext:
-            allowPrivilegeEscalation: false
-            privileged: false
-            runAsNonRoot: true
-            runAsUser: 1001
           image: docker.io/bitnami/mysql:8.4
           imagePullPolicy: Always
           envFrom:
