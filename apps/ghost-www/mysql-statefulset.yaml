@@ -48,7 +48,7 @@ spec:
           - name: tmp
             mountPath: /tmp
             readOnly: false
-    volumes:
+      volumes:
       - name: data
         persistentVolumeClaim:
           claimName: mysql-pvc
