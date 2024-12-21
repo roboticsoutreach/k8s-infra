@@ -3,5 +3,6 @@ kind: HelmRepository
 metadata:
   name: ghost
 spec:
+  type: oci
   interval: 24h
   url: oci://registry-1.docker.io/bitnamicharts
