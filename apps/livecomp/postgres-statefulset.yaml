@@ -28,7 +28,7 @@ spec:
           name: psql
         volumeMounts:
         - name: postgres-data
-          mountPath: /data
+          mountPath: /var/lib/postgresql/data
         envFrom:
         - secretRef:
             name: postgres-env
