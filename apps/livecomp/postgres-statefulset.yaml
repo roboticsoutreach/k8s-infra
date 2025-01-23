@@ -27,7 +27,7 @@ spec:
         - containerPort: 5432
           name: psql
         volumeMounts:
-        - name: postgres
+        - name: postgres-data
           mountPath: /data
         envFrom:
         - secretRef:
