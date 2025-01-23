@@ -28,6 +28,12 @@ spec:
         ports:
         - containerPort: 3000
           name: http
+        volumeMounts:
+        - name: db-local
+          mountPath: /.local
         envFrom:
         - secretRef:
             name: server-env
+      volumes:
+      - name: db-local
+        emptyDir: {}
