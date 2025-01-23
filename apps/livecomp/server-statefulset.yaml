@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: livecomp-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: livecomp-server
+  serviceName: livecomp-server
+  template:
+    metadata:
+      labels:
+        app: postgresql
+    spec:
+      containers:
+      - name: app
+        image: ghcr.io/roboticsoutreach/livecomp-server:latest
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsNonRoot: true
+          runAsUser: 1001
+          runAsGroup: 1001
+        ports:
+        - containerPort: 3000
+          name: http

@@ -7,3 +7,7 @@ resources:
   - postgres-env-secret.yaml
   - postgres-statefulset.yaml
   - postgres-service.yaml
+  - server-env-secret.yaml
+  - server-statefulset.yaml
+  - server-service.yaml
+  - server-ingress.yaml

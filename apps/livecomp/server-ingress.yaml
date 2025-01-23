@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: livecomp-server
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  rules:
+  - host: api.comp.roboticsoutreach.org
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: livecomp-server
+            port:
+              number: 80
+  tls:
+  - hosts:
+    - api.comp.roboticsoutreach.org
+    secretName: api.comp.roboticsoutreach.org-tls
