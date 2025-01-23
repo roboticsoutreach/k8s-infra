@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: livecomp-client
+spec:
+  selector:
+    matchLabels:
+      app: livecomp-client
+  template:
+    metadata:
+      labels:
+        app: livecomp-client
+    spec:
+      containers:
+      - name: app
+        image: ghcr.io/roboticsoutreach/livecomp-client:latest
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "100m"
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsNonRoot: true
+          runAsUser: 101
+          runAsGroup: 101
+        ports:
+        - containerPort: 8080
+          name: http

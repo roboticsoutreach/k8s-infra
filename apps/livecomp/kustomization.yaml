@@ -11,3 +11,6 @@ resources:
   - server-statefulset.yaml
   - server-service.yaml
   - server-ingress.yaml
+  - client-deployment.yaml
+  - client-service.yaml
+  - client-ingress.yaml
