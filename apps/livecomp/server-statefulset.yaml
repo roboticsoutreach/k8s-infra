@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       labels:
-        app: postgresql
+        app: livecomp-server
     spec:
       containers:
       - name: app
