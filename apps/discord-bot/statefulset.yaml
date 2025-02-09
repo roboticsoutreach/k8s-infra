@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: ghcr.io/roboticsoutreach/discord-bot:latest # {"$imagepolicy": "flux-system:discord-bot"}
+        image: ghcr.io/roboticsoutreach/discord-bot:latest-1739131311 # {"$imagepolicy": "flux-system:discord-bot"}
         resources:
           requests:
             memory: 128Mi
