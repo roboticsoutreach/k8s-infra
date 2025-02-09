@@ -4,4 +4,5 @@ namespace: discord-bot
 resources:
   - namespace.yaml
   - env-secret.yaml
+  - data-pvc.yaml
   - statefulset.yaml
