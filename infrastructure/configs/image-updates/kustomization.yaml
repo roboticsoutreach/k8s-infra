@@ -4,3 +4,4 @@ resources:
   - livecomp-client.yaml
   - livecomp-server.yaml
   - livecomp.yaml
+  - discord-bot.yaml
