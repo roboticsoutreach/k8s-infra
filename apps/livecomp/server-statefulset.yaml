@@ -17,9 +17,12 @@ spec:
       - name: app
         image: ghcr.io/roboticsoutreach/livecomp-server:latest-1738937303 # {"$imagepolicy": "flux-system:livecomp-server"}
         resources:
+          requests:
+            memory: 500Mi
+            cpu: 200m
           limits:
-            memory: "1Gi"
-            cpu: "200m"
+            memory: 1Gi
+            cpu: 500m
         securityContext:
           allowPrivilegeEscalation: false
           runAsNonRoot: true
