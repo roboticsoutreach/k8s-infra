@@ -28,6 +28,13 @@ spec:
           runAsNonRoot: true
           runAsUser: 1000
           runAsGroup: 1000
+        volumeMounts:
+        - name: data
+          mountPath: /app
         envFrom:
         - secretRef:
             name: env
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: data-pvc
