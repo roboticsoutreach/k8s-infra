@@ -15,9 +15,12 @@ spec:
       - name: vaultwarden
         image: ghcr.io/dani-garcia/vaultwarden:1.32.5-alpine
         resources:
+          requests:
+            memory: 512Mi
+            cpu: 200m
           limits:
-            memory: "512Mi"
-            cpu: "500m"
+            memory: 1Gi
+            cpu: 500m
         ports:
         - containerPort: 80
           name: http
