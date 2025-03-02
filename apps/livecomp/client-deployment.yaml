@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: ghcr.io/roboticsoutreach/livecomp-client:latest-1740914393 # {"$imagepolicy": "flux-system:livecomp-client"}
+        image: ghcr.io/roboticsoutreach/livecomp-client:latest-1740918301 # {"$imagepolicy": "flux-system:livecomp-client"}
         resources:
           limits:
             memory: "256Mi"
